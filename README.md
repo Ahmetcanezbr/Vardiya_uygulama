@@ -1,0 +1,2 @@
+# Vardiya_uygulama
+flask
