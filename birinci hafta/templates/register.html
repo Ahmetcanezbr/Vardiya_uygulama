@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block title %}Kayıt Ol{% endblock %}
+{% block content %}
+<style>
+    body {
+    background-color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b30000;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Başlık */
+h2 {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 30px;
+}
+
+/* Form kutusu */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fff0f0;
+    border: 1px solid #b30000;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Giriş alanları */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #b30000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #b30000;
+    font-size: 16px;
+}
+
+/* Buton */
+button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #b30000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #990000;
+}
+
+</style>
+<h2>Kayıt Ol</h2>
+<form method="post" action="/register">
+    <input type="text" name="username" placeholder="Kullanıcı Adı" required><br>
+    <input type="email" name="email" placeholder="Email" required><br>
+    <input type="password" name="password" placeholder="Şifre" required><br>
+    <button type="submit">Kayıt Ol</button>
+</form>
+{% endblock %}
