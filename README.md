@@ -1,2 +1,0 @@
-# Vardiya_uygulama
-flask
