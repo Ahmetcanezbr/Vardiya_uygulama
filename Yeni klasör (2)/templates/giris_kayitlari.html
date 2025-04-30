@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}Giriş Kayıtları{% endblock %}
+{% block content %}
+<style>
+    body {
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    color: #b30000;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Başlık */
+h2 {
+    text-align: center;
+    color: #b30000;
+    margin-bottom: 30px;
+}
+
+/* Tablo */
+table {
+    width: 90%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #fff0f0;
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.1);
+    border: 1px solid #b30000;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    border: 1px solid #b30000;
+}
+
+th {
+    background-color: #b30000;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #ffe6e6;
+}
+
+tr:hover {
+    background-color: #ffcccc;
+    cursor: pointer;
+}
+
+</style>
+<h2>Giriş Kayıtları</h2>
+<table border="1">
+    <tr>
+        <th>Ad Soyad</th>
+        <th>Tarih</th>
+        <th>Giriş Saati</th>
+        <th>Çıkış Saati</th>
+    </tr>
+    {% for kayit in giris_kayitlari %}
+    <tr>
+        <td>{{ kayit.ad_soyad }}</td>
+        <td>{{ kayit.tarih }}</td>
+        <td>{{ kayit.giris_saati }}</td>
+        <td>{{ kayit.cikis_saati }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

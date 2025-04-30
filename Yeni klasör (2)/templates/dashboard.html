@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<style>
+    /* Genel gövde ayarları */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
+    color: #b30000;
+}
+
+/* Sayfa başlığı */
+h2 {
+    text-align: center;
+    color: #b30000;
+    margin-top: 60px;
+    font-size: 32px;
+}
+
+/* Açıklama paragrafı */
+p {
+    text-align: center;
+    color: #660000;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+/* İçerik kutusu */
+.dashboard-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff0f0;
+    border: 1px solid #b30000;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(179, 0, 0, 0.1);
+}
+
+</style>
+<h2>Hoş Geldiniz!</h2>
+<p>Sisteme genel bakış.</p>
+{% endblock %}
